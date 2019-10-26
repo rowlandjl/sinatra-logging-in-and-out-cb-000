@@ -12,6 +12,8 @@ class ApplicationController < Sinatra::Base
 
   post '/login' do
     @user = User.find_by(usrname: params[:username])
+    if @user 
+      session[:]
   end
 
   get '/account' do
