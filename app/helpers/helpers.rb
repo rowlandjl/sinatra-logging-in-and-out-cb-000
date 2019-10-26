@@ -6,7 +6,7 @@ class Helpers
   end 
   
   def self.is_logged_in?(session) 
-    current_user(session)
+    session[:user_id].nil? 
   end 
   
 end
